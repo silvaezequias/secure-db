@@ -39,6 +39,18 @@ $ npm install secure-db
 const { Database } = require('secure-db');
 const db = new Database('my-database');
 ```
+
+# Deprecated Functions !Important
+
+- Child
+- getChilds
+- setBigInt
+
+The "Child" function has been migrated to the [Database](https://github.com/secure-db/secure-db/blob/master/docs/database.md) function.
+<br>
+The "getChilds" function has been migrated to the [getDatabases](https://github.com/secure-db/secure-db/blob/master/docs/methods/getDatabases.md) function.
+<br>
+
 ## Example Usage
 
 ```javascript
