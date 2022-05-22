@@ -47,10 +47,12 @@ const db = new Database('my-database');
 - setBigInt
 
 > The [Child](#deprecated-functions-important) function has been migrated to the [Database](https://github.com/secure-db/secure-db/blob/master/docs/database.md) function.
-<br>
-The [getChilds](#deprecated-functions-important) function has been migrated to the [getDatabases](https://github.com/secure-db/secure-db/blob/master/docs/methods/getDatabases.md) function.
-<br>
-The [setBigInt](#deprecated-functions-important) function has been removed.
+
+
+> The [getChilds](#deprecated-functions-important) function has been migrated to the [getDatabases](https://github.com/secure-db/secure-db/blob/master/docs/methods/getDatabases.md) function.
+
+
+> The [setBigInt](#deprecated-functions-important) function has been removed.
 
 ## Example Usage
 
