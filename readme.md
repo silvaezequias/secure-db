@@ -17,7 +17,7 @@ SecureDB is a simple and powerful local database that helps [Node.js](https://no
 
 - Fast and high performance
 - Encryption using security key
-- Automatic backup
+- ~~Automatic backup~~^
 - Infinite databases in folders
 
 ## Installation
@@ -46,10 +46,11 @@ const db = new Database('my-database');
 - getChilds
 - setBigInt
 
-The "Child" function has been migrated to the [Database](https://github.com/secure-db/secure-db/blob/master/docs/database.md) function.
+> The [Child](#deprecated-functions-important) function has been migrated to the [Database](https://github.com/secure-db/secure-db/blob/master/docs/database.md) function.
 <br>
-The "getChilds" function has been migrated to the [getDatabases](https://github.com/secure-db/secure-db/blob/master/docs/methods/getDatabases.md) function.
+The [getChilds](#deprecated-functions-important) function has been migrated to the [getDatabases](https://github.com/secure-db/secure-db/blob/master/docs/methods/getDatabases.md) function.
 <br>
+The [setBigInt](#deprecated-functions-important) function has been removed.
 
 ## Example Usage
 
