@@ -1,0 +1,30 @@
+{
+  "name": "secure-db",
+  "version": "2.5.2",
+  "description": "A very intuitive local database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/secure-db/secure-db.git"
+  },
+  "keywords": [
+    "database",
+    "local",
+    "json",
+    "db",
+    "no-sql"
+  ],
+  "author": "DablioZe'",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/secure-db/secure-db/issues"
+  },
+  "homepage": "https://github.com/secure-db/secure-db#readme",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "lodash": "^4.17.21"
+  }
+}
