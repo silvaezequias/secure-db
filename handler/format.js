@@ -12,10 +12,9 @@ function names(names){
         var replaceWhiteSpace = /(.) +(.)/g;
         var removeWhiteSpace = / /g;
         var invalidChars = /[\*\.\"\/\\\[\]\:\;\|\,\?\!\<\>\'\`\´]/gim;
-        var replaced = new String(names[i])
-        .replace(invalidChars, '')
-        .replace(replaceWhiteSpace, '$1-$2')
-        .replace(removeWhiteSpace, '');
+        var replaced = new String(names[i]).replace(invalidChars, '')
+        .replace(replaceWhiteSpace, '$1-$2').replace(removeWhiteSpace, '');
+
         if (replaced == '') names.splice(i, 1);
         else names[i] = replaced;
     }
