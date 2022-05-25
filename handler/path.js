@@ -13,8 +13,7 @@ function active(database_name){
         var temporaryPath = [];
         for (let i = 0; i < databases.length; i++){
             temporaryPath.push(databases[i]);
-            if (exists(temporaryPath)) return;
-            fs.mkdirSync(resolve(temporaryPath));
+            if (!exists(temporaryPath)) fs.mkdirSync(resolve(temporaryPath));
         }
     }
 }
