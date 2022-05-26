@@ -13,5 +13,6 @@ module.exports = {
     set: require('./methods/set'),
     splice: require('./methods/splice'),
     sub: require('./methods/sub'),
-    sum: require('./methods/sum')
+    sum: require('./methods/sum'),
+    toggle: require('./methods/toggle')
 }
