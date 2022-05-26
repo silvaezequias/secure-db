@@ -108,8 +108,8 @@ getDatabases('users', (user_list) => {
 ## Links
 
 - [GitHub](https://github.com/secure-db/secure-db#readme)
-- [Documentation](https://github.com/secure-db/secure-db/docs)
-- [Support Server on Discord](https://discord.gg/8fuQCvajgU)
+- [Documentation](https://github.com/secure-db/secure-db/tree/master/docs)
+- [Support Server on Discord](https://discord.gg/gAy6kZzeaR)
 - [More Examples](#example-usage)
 - [npm](https://www.npmjs.com/package/secure-db)
 
