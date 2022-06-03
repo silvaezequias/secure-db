@@ -3,7 +3,7 @@
 This method serves to return the name of all [`Databases`](https://github.com/secure-db/secure-db/blob/master/docs/database.md) that exist.
 
 ```javascript
-db.getDatabases('database-name', callback function);
+db.getDatabases('database-name', callback function <optional>);
 ```
 
 If there is no child database, the returned value will be an empty Array.
@@ -21,9 +21,8 @@ const Lucas = new Database('users', 'Lucas');
 Felipe.set('age', 45);
 Lucas.set('age', 19);
 
-getDatabases('users', user_list => {
-  // user_list = [ 'Felipe', 'Lucas']
-});
+var userList = getDatabases('users');
+// userList = ['Felipe', 'Lucas']
 ```
 
 
@@ -42,9 +41,8 @@ getDatabases('users', user_list => {
   // user_list = [ 'Felipe' ]
 });
 
-getDatabases('users', 'Felipe', item_list => {
-  // item_list = [ 'books', 'movies', 'friends' ]
-});
+var itemList = getDatabases('users', 'Felipe');
+// itemList = [ 'books', 'movies', 'friends' ]
 
 getDatabases('users', 'Felipe', 'books', item_list => {
   // item_list = []
