@@ -1,1 +1,4 @@
-module.exports = {fileExtension: 'db'}
+module.exports = {
+    fileExtension: 'db',
+    infinityChar: '∞'
+}
