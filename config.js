@@ -1,4 +1,5 @@
 module.exports = {
     fileExtension: 'db',
-    infinityChar: '∞'
+    infinityChar: '∞',
+    maxLimit: 1e+20
 }

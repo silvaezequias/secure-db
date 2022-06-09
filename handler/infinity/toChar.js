@@ -1,4 +1,4 @@
-const  { infinityChar } = require('../../config');
+const  { infinityChar, maxLimit } = require('../../config');
 
 function InfinityToChar(data){
     if (data === Infinity) data = infinityChar;
@@ -16,7 +16,7 @@ function InfinityToChar(data){
             switch(item.constructor){
                 case Array: item = ParseDeepArray(item); break;
                 case Object: item = ParseDeepObject(item); break;
-                case Number: item = item > 1e+20 ? infinityChar : item; break;
+                case Number: item = item > maxLimit ? infinityChar : item; break;
             }
             target[index] = item;
         });
@@ -31,7 +31,7 @@ function InfinityToChar(data){
             switch(item.constructor){
                 case Array: item = ParseDeepArray(item); break;
                 case Object: item = ParseDeepObject(item); break;
-                case Number: item = item > 1e+20 ? infinityChar : item; break;
+                case Number: item = item > maxLimit ? infinityChar : item; break;
             }
             target[key] = item;
         })
