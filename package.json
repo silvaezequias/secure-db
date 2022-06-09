@@ -1,6 +1,6 @@
 {
   "name": "secure-db",
-  "version": "2.7.8",
+  "version": "2.8.8",
   "description": "A very intuitive local database.",
   "main": "index.js",
   "scripts": {

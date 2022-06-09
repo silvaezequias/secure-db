@@ -14,5 +14,6 @@ module.exports = {
     splice: require('./methods/splice'),
     sub: require('./methods/sub'),
     sum: require('./methods/sum'),
-    toggle: require('./methods/toggle')
+    toggle: require('./methods/toggle'),
+    toObject: require('./methods/toObject')
 }
