@@ -42,12 +42,15 @@ class Interface { #name;
 
 
         /**
-         * 
-         * @param {string|number} identifier 
-         * @param {*} value
+         * This method is used to concatenate one value in front of another value, be it number or string.
+         * @param {string|number} identifier - The identifier responsible for finding the data within the database.
+         * @param {*} value - The value that will be part of the processing of the data that is already saved.
+         * @returns {*} Returns the final result of the processed data.
          */
         this.concat = function Concat(identifier, value){
-
+            if (isUnefinedOrNull(identifier)) throw new TypeError('No identifier specified "[...].concat(?)".');
+            else if (isUnefinedOrNull(value)) throw new TypeError('No value specified "[...].concat(..., ?)".');
+            else return methods['concat']([ identifier, value ], this.#name);
         }
 
 
