@@ -5,10 +5,8 @@ The `add` method is used to add a number to another or to concatenate a string, 
 ```javascript
 db.add('data-name', 'data-value');
 ```
-This method will probably not work if the data is an `Object` or an `Array`.
 
 * The first parameter must necessarily be a `String` or a `Number`.
-* The second parameter can be a `String` or a `Number`.
 
 ### Example
 

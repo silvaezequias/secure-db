@@ -20,4 +20,11 @@ function names(names){
     }
     return names.length == 0 ? ['main'] : names;
 }
-module.exports = { json, names, stringfy };
+function filter(target){
+    var args =  Array.from(target);
+    args.forEach(each => { (each && each.constructor === Array) ? (args.concat(each)) : null; });
+    var filtered = args.filter(each => ['number', 'string', 'boolean'].includes(typeof each))
+    filtered.length == 0 ? filtered.push('main') : null;
+    return filtered;
+}
+module.exports = { json, names, stringfy, filter };

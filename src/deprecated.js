@@ -1,4 +1,4 @@
-const docs = require("./package.json").homepage;
+const docs = require("../package.json").homepage;
 module.exports = {
     Child: class DeprecatedFunction {
         constructor(){
