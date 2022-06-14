@@ -38,9 +38,6 @@ class Interface { #name;
             return methods['all'](this.#name);
         }
 
-
-
-
         /**
          * This method is used to concatenate one value in front of another value, be it number or string.
          * @param {string|number} identifier - The identifier responsible for finding the data within the database.

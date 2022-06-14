@@ -65,9 +65,16 @@ module.exports = ([identifier, solidData], database) => {
                     break;
                 };
                 set(saved_data, identifier, filtered_data);
-            } else set(saved_data, identifier, solidData);
+            } else {
+                switch (solidData.constructor){
+                    case String: case Number: 
+                    case Object: case Array: 
+                    case Boolean: set(saved_data, identifier, solidData); break;
+                }
+            }
         break;
     }
+
     handler.write(saved_data, database);
-    return get(saved_data, identifier, solidData);
+    return get(saved_data, identifier, undefined);
 }
