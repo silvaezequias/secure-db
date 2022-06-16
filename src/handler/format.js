@@ -21,6 +21,7 @@ function names(names){
     return names.length == 0 ? ['main'] : names;
 }
 function filter(target){
+    target = target && [String, Number].includes(target.constructor) ? [target] : target;
     var args =  Array.from(target);
     args.forEach((each, index) => { if(each && each.constructor === Array){args = args.concat(each); args.splice(index, 1)}});
     var filtered = args.filter(each => ['number', 'string', 'boolean'].includes(typeof each))

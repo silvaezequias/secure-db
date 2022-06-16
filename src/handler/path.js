@@ -8,7 +8,7 @@ function active(database_name){
     !exists([true]) ? fs.mkdirSync('./database') : null;
     var databases = database_name.slice(0, -1);
     var state = exists(databases);
-
+    
     if (!state && database_name.length > 1){
         var temporaryPath = [];
         for (let i = 0; i < databases.length; i++){
