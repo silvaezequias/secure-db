@@ -9,23 +9,22 @@ function isUnefinedOrNull(target){
 class DatabaseInterface { #name;
     /**
      * This is the function that creates a new database.
-     * @param {string|number|string[]} Names 
-     * @returns {DatabaseInterface}
+     * @param {string|number|string[]} Names - Name(s) of the database(s).
+     * @returns {DatabaseInterface} Returns all data processing functions in the database.
      */
-    constructor(Names){
-
-        this.Database = DatabaseInterface;
+    constructor(Names){ 
         this.#name = filter(arguments);
+        this.Database = DatabaseInterface;
 
         /**
          * The `add` method is used to add a number to another or to concatenate a string, it is the junction of the `concat` method and the `sum`.
          * @param {string|number} identifier - The identifier responsible for finding the data within the database.
-         * @param {*} value - The value that will be part of the processing of the data that is already saved.
-         * @returns {*} Returns the final result of the processed data.
+         * @param {any} value - The value that will be part of the processing of the data that is already saved.
+         * @returns {any} Returns the final result of the processed data.
          */
         this.add = function Add(identifier, value){
-            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].add(${identifier})".`);
-            else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].add(${identifier}, ${value})".`);
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].add(undefined)".`);
+            else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].add(${identifier}, undefined)".`);
             else return methods['add']([ identifier, value ], this.#name);
         }
 
@@ -40,44 +39,44 @@ class DatabaseInterface { #name;
         /**
          * This method is used to concatenate one value in front of another value, be it number or string.
          * @param {string|number} identifier - The identifier responsible for finding the data within the database.
-         * @param {*} value - The value that will be part of the processing of the data that is already saved.
-         * @returns {*} Returns the final result of the processed data.
+         * @param {any} value - The value that will be part of the processing of the data that is already saved.
+         * @returns {any} Returns the final result of the processed data.
          */
         this.concat = function Concat(identifier, value){
-            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].concat(${identifier})".`);
-            else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].concat(${identifier}, ${value})".`);
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].concat(undefined)".`);
+            else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].concat(${identifier}, undefined)".`);
             else return methods['concat']([ identifier, value ], this.#name);
         }
 
         /**
          * This method is used to delete any single data.
          * @param {string|number} identifier - The identifier responsible for finding the data within the database.
+         * @returns {null}
          */
         this.delete = function Delete(identifier){
-            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].delete(${identifier})".`);
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].delete(undefined)".`);
             else return methods['delete']([identifier], this.#name);
         }
 
         /**
          * This method is to check if a database exists or not.
-         * @param {string|number|string[]} names 
+         * @param {string|number|string[]} names - Name(s) of the database(s).
+         * @returns {Boolean} (true) if the database exists - (false) if the database does not exist.
          */
         this.exists = function Exists(names){
-            if (filter(arguments).length === 0) throw new TypeError(`No name specified "[...].exists(${names})".`);
+            if (filter(arguments).length === 0) throw new TypeError(`No name specified "[...].exists(undefined)".`);
             return methods['exists']([filter(arguments)], this.#name);
         }
 
         /**
          * This method is used to return saved data.
          * @param {string|number} identifier - The identifier responsible for finding the data within the database.
+         * @returns {any} Returns the required data value.
          */
         this.get = function Get(identifier){
-            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].get(${identifier})".`);
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].get(undefined)".`);
             else return methods['get']([identifier], this.#name);
         }
-
-
-
 
         /**
          * 
