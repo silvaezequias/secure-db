@@ -1,19 +1,18 @@
-const set = require('lodash')['set'];
+const { set } = require('lodash');
 const handler = {
     read: require('../handler/read'),
     write: require('../handler/write')
 }
 
 module.exports = ([ identifier, solidData ], database) => {
-    const saved_data = handler.read(database.name);
-    var new_data = saved_data;
+    var saved_data = handler.read(database);
 
-    if (!identifier) throw new TypeError('No identifier specified "[...].set(?)".');
     switch (identifier.constructor){
-        case Number: case String: new_data = solidData ? set(saved_data, identifier, solidData) : saved_data; break;
-        case Array: new_data = Object.assign({}, identifier); break;
-        case Object: new_data = identifier; break;
+        case Number: case String: case Boolean: set(saved_data, identifier, solidData);  break;
+        case Array: saved_data = Object.assign({}, identifier); break;
+        case Object: saved_data = identifier; break;
     }
 
-    handler.write(new_data, database.name);
+    handler.write(saved_data, database);
+    return solidData ? solidData : identifier;
 }

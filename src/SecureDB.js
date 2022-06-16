@@ -123,35 +123,36 @@ class DatabaseInterface {
         };
 
         /**
-         * 
-        * @param {string[]} identifier 
+         * This method is used to reset the database. It is possible to maintain data by adding them to the method parameters.
+         * @param {string[]} identifier - The identifier responsible for finding the data within the database.
+         * @return {any} Returns the final result of the processed data.
          */
-        this.reset = function Reset(identifier){
+        this.reset = function Reset(identifier = {}){
+            identifier = identifier && identifier.constructor === Array ? identifier : Array.from(arguments);
             return methods['reset']([identifier], name);
         }
 
-
-
-
         /**
-         * 
-         * @param {string|number} identifier 
-        * @param {*} value 
+         * This method is to set a data in the database.
+         * @param {any} identifier - The identifier responsible for finding the data within the database.
+         * @param {any} value - The value that will be part of the processing of the data that is already saved.
+         * @return {any} Returns the final result of the processed data.
          */
         this.set = function Set(identifier, value){
-
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].set(undefined)".`);
+            return methods['set']([ identifier, value ], name);
         }
 
-
-
-
         /**
-         * 
-         * @param {string|number} identifier 
-        * @param {*} data 
+         * This method is used to remove an element from an array.
+         * @param {string|number} identifier - The identifier responsible for finding the data within the database.
+         * @param {any} data - Data that will be removed from the array.
+         * @return {any} Returns the final result of the processed data.
          */
         this.splice = function Splice(identifier, data){
-
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].splice(undefined)".`);
+            else if (isUnefinedOrNull(data)) throw new TypeError(`No data specified "[...].splice(..., undefined)".`);
+            return methods['splice']([identifier, data], name);
         }
 
         
@@ -159,8 +160,8 @@ class DatabaseInterface {
 
         /**
          * 
-        * @param {string|number} identifier 
-        * @param {string|number} value 
+         * @param {string|number} identifier 
+         * @param {string|number} value 
          */
         this.sub = function Sub(identifier, value){
 
