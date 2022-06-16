@@ -1,3 +1,5 @@
+const { defaultName } = require("../config");
+
 function json(string){
     try {return JSON.parse(string)}
     catch(err){return {}};
@@ -18,14 +20,14 @@ function names(names){
         if (replaced == '') names.splice(i, 1);
         else names[i] = replaced;
     }
-    return names.length == 0 ? ['main'] : names;
+    return names.length == 0 ? [defaultName] : names;
 }
 function filter(target){
     target = target && [String, Number].includes(target.constructor) ? [target] : target;
     var args =  Array.from(target);
     args.forEach((each, index) => { if(each && each.constructor === Array){args = args.concat(each); args.splice(index, 1)}});
     var filtered = args.filter(each => ['number', 'string', 'boolean'].includes(typeof each))
-    filtered.length == 0 ? filtered.push('main') : null;
+    filtered.length == 0 ? filtered.push(defaultName) : null;
     return filtered;
 }
 module.exports = { json, names, stringfy, filter };
