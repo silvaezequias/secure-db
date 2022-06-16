@@ -1,6 +1,6 @@
 ## Delete Method
 
-This method is used to delete some data from the database.
+This method is used to delete any single data.
 
 ```javascript
 db.delete('data-name');

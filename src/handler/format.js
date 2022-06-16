@@ -22,7 +22,7 @@ function names(names){
 }
 function filter(target){
     var args =  Array.from(target);
-    args.forEach(each => { (each && each.constructor === Array) ? (args.concat(each)) : null; });
+    args.forEach((each, index) => { if(each && each.constructor === Array){args = args.concat(each); args.splice(index, 1)}});
     var filtered = args.filter(each => ['number', 'string', 'boolean'].includes(typeof each))
     filtered.length == 0 ? filtered.push('main') : null;
     return filtered;

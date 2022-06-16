@@ -1,21 +1,20 @@
-const pkg = require('../package.json');
 const methods = require('./methods');
 const { filter } = require('./handler/format');
 const deprecated = require('./deprecated');
 
 function isUnefinedOrNull(target){
-    return typeof identifier === 'undefined' && typeof identifier === 'null'
+    return target === undefined || target === null;
 }
 
-class Interface { #name;
+class DatabaseInterface { #name;
     /**
-     * 
-     * @param {...string|number|string[]} Names 
+     * This is the function that creates a new database.
+     * @param {string|number|string[]} Names 
+     * @returns {DatabaseInterface}
      */
     constructor(Names){
 
-        this.Database = Interface;
-        this.version = pkg['version'];
+        this.Database = DatabaseInterface;
         this.#name = filter(arguments);
 
         /**
@@ -25,8 +24,8 @@ class Interface { #name;
          * @returns {*} Returns the final result of the processed data.
          */
         this.add = function Add(identifier, value){
-            if (isUnefinedOrNull(identifier)) throw new TypeError('No identifier specified "[...].add(?)".');
-            else if (isUnefinedOrNull(value)) throw new TypeError('No value specified "[...].add(..., ?)".');
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].add(${identifier})".`);
+            else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].add(${identifier}, ${value})".`);
             else return methods['add']([ identifier, value ], this.#name);
         }
 
@@ -45,42 +44,36 @@ class Interface { #name;
          * @returns {*} Returns the final result of the processed data.
          */
         this.concat = function Concat(identifier, value){
-            if (isUnefinedOrNull(identifier)) throw new TypeError('No identifier specified "[...].concat(?)".');
-            else if (isUnefinedOrNull(value)) throw new TypeError('No value specified "[...].concat(..., ?)".');
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].concat(${identifier})".`);
+            else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].concat(${identifier}, ${value})".`);
             else return methods['concat']([ identifier, value ], this.#name);
         }
 
-
-
-
         /**
-         * 
-         * @param {string|number} identifier 
+         * This method is used to delete any single data.
+         * @param {string|number} identifier - The identifier responsible for finding the data within the database.
          */
         this.delete = function Delete(identifier){
-
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].delete(${identifier})".`);
+            else return methods['delete']([identifier], this.#name);
         }
 
-
-
-
         /**
-         * 
+         * This method is to check if a database exists or not.
          * @param {string|number|string[]} names 
          */
         this.exists = function Exists(names){
-
+            if (filter(arguments).length === 0) throw new TypeError(`No name specified "[...].exists(${names})".`);
+            return methods['exists']([filter(arguments)], this.#name);
         }
 
-
-
-
         /**
-         * 
-         * @param {string|number} identifier 
+         * This method is used to return saved data.
+         * @param {string|number} identifier - The identifier responsible for finding the data within the database.
          */
         this.get = function Get(identifier){
-            
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].get(${identifier})".`);
+            else return methods['get']([identifier], this.#name);
         }
 
 
@@ -211,14 +204,8 @@ class Interface { #name;
         this.toObject = function ToObject(){
 
         }
-
-
-        
-        // Object.keys(methods).forEach(method => {
-        //     this[method] = (...args) => methods[method](args, this);
-        // });
     }
 }
 
-Object.assign(Interface.prototype, deprecated);
-module.exports = new Interface();
+Object.assign(DatabaseInterface.prototype, deprecated);
+module.exports = new DatabaseInterface();
