@@ -4,12 +4,9 @@ const handler = {
     write: require("../handler/write"),
 };
 
-module.exports = ([identifier, solidData = true], database) => {
-    const saved_data = handler.read(database.name);
+module.exports = ([identifier, solidData], database) => {
+    const saved_data = handler.read(database);
     var filtered_data = saved_data;
-
-    if (!identifier)
-        throw new TypeError('No identifier specified "[...].toggle(?)".');
 
     switch (identifier.constructor) {
         case String:
@@ -18,12 +15,12 @@ module.exports = ([identifier, solidData = true], database) => {
                 case Boolean:
                     filtered_data = get(saved_data, identifier, null);
                     if (typeof filtered_data === "boolean")
-                        filtered_data = set(
+                        set(
                             saved_data,
                             identifier,
                             filtered_data ? false : true
                         );
-                    else filtered_data = set(saved_data, identifier, solidData);
+                    else set(saved_data, identifier, solidData);
                     break;
                 case Array:
                     filtered_data = get(saved_data, identifier, null);
@@ -40,15 +37,11 @@ module.exports = ([identifier, solidData = true], database) => {
                             : null;
                     }
                     indexOf = indexOf < solidData.length - 1 ? indexOf : -1;
-                    filtered_data = set(
-                        saved_data,
-                        identifier,
-                        solidData[++indexOf]
-                    );
+                    set(saved_data, identifier, solidData[++indexOf]);
                     break;
             }
             break;
     }
-    handler.write(filtered_data, database.name);
+    handler.write(saved_data, database);
     return get(saved_data, identifier, solidData);
 };

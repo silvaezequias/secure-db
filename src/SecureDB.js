@@ -155,54 +155,46 @@ class DatabaseInterface {
             return methods['splice']([identifier, data], name);
         }
 
-        
-
-
         /**
-         * 
-         * @param {string|number} identifier 
-         * @param {string|number} value 
+         * This method is used to subtract a value from a number.
+         * @param {string|number} identifier - The identifier responsible for finding the data within the database.
+         * @param {string|number} value - The value that will be part of the processing of the data that is already saved.
+         * @return {any} Returns the final result of the processed data.
          */
         this.sub = function Sub(identifier, value){
-
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].sub(undefined)".`);
+            else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].sub(..., undefined)".`);
+            return methods['sub']([identifier, value], name);
         }
 
-
-
-
-
         /**
-         * 
-         * @param {string|number} identifier 
-         * @param {string|number} value 
+         * This method is used to subtract a value from a number.
+         * @param {string|number} identifier - The identifier responsible for finding the data within the database.
+         * @param {string|number} value - The value that will be part of the processing of the data that is already saved.
+         * @return {any} Returns the final result of the processed data.
          */
         this.sum = function Sum(identifier, value){
-
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].sum(undefined)".`);
+            else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].sum(..., undefined)".`);
+            return methods['sum']([identifier, value], name);
         }
-
-
-
-
 
         /**
-         * 
-         * @param {string|number} identifier 
-         * @param {boolean|[]} value 
+         * The `toggle` method is used to toggle values in the database.
+         * @param {string|number} identifier - The identifier responsible for finding the data within the database.
+         * @param {boolean|any[]} [value=true] - Value that will be alternated with later ones. Boolean case, toggles between True and False.
+         * @return {any} Returns the value that was toggled.
          */
-        this.toggle = function Toggle(identifier, value){
-
+        this.toggle = function Toggle(identifier, value = true){
+            if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].toggle(undefined)".`);
+            return methods['toggle']([identifier, value], name);
         }
-
-
-
-
 
         /**
-         *  
+         * The all method is used to return all data saved in the database in object.
+         * @returns {{}} Returns all data from the database.
          */
-        this.toObject = function ToObject(){
-
-        }
+        this.toObject = function ToObject(){ return methods['toObject'](name) }
     }
 }
 

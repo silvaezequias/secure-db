@@ -5,23 +5,19 @@ const handler = {
 }
 
 module.exports = ([identifier, solidData], database) => {
-    const saved_data = handler.read(database.name);
-    var filtered_data = saved_data;
-
-    if (!identifier) throw new TypeError('No identifier specified "[...].sub(?)".')
-    if (!solidData) throw new TypeError('No value specified "[...].sub(..., ?)".')
+    const saved_data = handler.read(database);
+    var filtered_data = get(saved_data, identifier, null);
 
     switch (identifier.constructor){
         case String: case Number: 
             switch (solidData.constructor){
                 case String: case Number:
-                filtered_data = get(saved_data, identifier, null);  
-                if (!isNaN(filtered_data) && !isNaN(solidData))
-                filtered_data = set(saved_data, identifier, Number(filtered_data) - Number(solidData));
+                    if (!isNaN(filtered_data) && !isNaN(solidData))
+                    set(saved_data, identifier, Number(filtered_data) - Number(solidData));
                 break;
             }
         break;
     }
-    handler.write(saved_data, database.name);
+    handler.write(saved_data, database);
     return get(saved_data, identifier, solidData);
 }
