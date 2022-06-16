@@ -117,9 +117,10 @@ class DatabaseInterface {
          * This method is used to **`permanently delete`** a database. To be able to use it again, you need to instantiate it again.
         * @param {string|number|string[]} database - Name(s) of the database(s).
          */
-        this.remove = function Remove(database = name){
-            return methods['remove'](filter(database));
-        }
+        this.remove = function Remove(database){
+            database = database && database.constructor === Array ? database : arguments;
+            return methods['remove'](filter(database))
+        };
 
         /**
          * 
