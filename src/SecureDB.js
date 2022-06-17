@@ -1,6 +1,5 @@
 const { filter } = require('./handler/format');
 const { defaultName } = require('./config');
-const deprecated = require('./deprecated');
 const methods = require('./methods');
 
 function isUnefinedOrNull(target){
@@ -198,5 +197,4 @@ class DatabaseInterface {
     }
 }
 
-Object.assign(DatabaseInterface.prototype, deprecated);
 module.exports = new DatabaseInterface(defaultName);
