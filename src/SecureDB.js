@@ -18,7 +18,7 @@ class DatabaseInterface {
         * @contant
         * @default
         */
-        const name = filter(arguments);
+        const DatabaseName = filter(arguments);
         this.Database = DatabaseInterface;
         /**
          * The `add` method is used to add a number to another or to concatenate a string, it is the junction of the `concat` method and the `sum`.
@@ -29,14 +29,14 @@ class DatabaseInterface {
         this.add = function Add(identifier, value){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].add(undefined)".`);
             else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].add(..., undefined)".`);
-            return methods['add']([ identifier, value ], name);
+            return methods['add']([ identifier, value ], DatabaseName);
         }
 
         /**
          * The all method is used to return all data saved in the database in an array.
          * @returns {Array} Returns all data from the database.
          */
-        this.all = function All(){ return methods['all'](name) }
+        this.all = function All(){ return methods['all'](DatabaseName) }
 
         /**
          * This method is used to concatenate one value in front of another value, be it number or string.
@@ -47,7 +47,7 @@ class DatabaseInterface {
         this.concat = function Concat(identifier, value){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].concat(undefined)".`);
             else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].concat(..., undefined)".`);
-            return methods['concat']([ identifier, value ], name);
+            return methods['concat']([ identifier, value ], DatabaseName);
         }
 
         /**
@@ -57,7 +57,7 @@ class DatabaseInterface {
          */
         this.delete = function Delete(identifier){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].delete(undefined)".`);
-            return methods['delete']([identifier], name);
+            return methods['delete']([identifier], DatabaseName);
         }
 
         /**
@@ -67,7 +67,7 @@ class DatabaseInterface {
          */
         this.exists = function Exists(names){
             if (filter(arguments).length === 0) throw new TypeError(`No name specified "[...].exists(undefined)".`);
-            return methods['exists']([filter(arguments)], name);
+            return methods['exists']([filter(arguments)], DatabaseName);
         }
 
         /**
@@ -77,7 +77,7 @@ class DatabaseInterface {
          */
         this.get = function Get(identifier){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].get(undefined)".`);
-            return methods['get']([identifier], name);
+            return methods['get']([identifier], DatabaseName);
         }
 
         /**
@@ -98,7 +98,7 @@ class DatabaseInterface {
          */
         this.has = function Has(identifier){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].has(undefined)".`);
-            return methods['has']([identifier], name);
+            return methods['has']([identifier], DatabaseName);
         }
 
         /**
@@ -110,7 +110,7 @@ class DatabaseInterface {
         this.push = function Push(identifier, value){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].push(undefined)".`);
             else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].push(..., undefined)".`);
-            return methods['push']([ identifier, value ], name);
+            return methods['push']([ identifier, value ], DatabaseName);
         }
 
         /**
@@ -129,7 +129,7 @@ class DatabaseInterface {
          */
         this.reset = function Reset(identifier = {}){
             identifier = identifier && identifier.constructor === Array ? identifier : Array.from(arguments);
-            return methods['reset']([identifier], name);
+            return methods['reset']([identifier], DatabaseName);
         }
 
         /**
@@ -140,7 +140,7 @@ class DatabaseInterface {
          */
         this.set = function Set(identifier, value){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].set(undefined)".`);
-            return methods['set']([ identifier, value ], name);
+            return methods['set']([ identifier, value ], DatabaseName);
         }
 
         /**
@@ -152,7 +152,7 @@ class DatabaseInterface {
         this.splice = function Splice(identifier, data){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].splice(undefined)".`);
             else if (isUnefinedOrNull(data)) throw new TypeError(`No data specified "[...].splice(..., undefined)".`);
-            return methods['splice']([identifier, data], name);
+            return methods['splice']([identifier, data], DatabaseName);
         }
 
         /**
@@ -164,7 +164,7 @@ class DatabaseInterface {
         this.sub = function Sub(identifier, value){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].sub(undefined)".`);
             else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].sub(..., undefined)".`);
-            return methods['sub']([identifier, value], name);
+            return methods['sub']([identifier, value], DatabaseName);
         }
 
         /**
@@ -176,7 +176,7 @@ class DatabaseInterface {
         this.sum = function Sum(identifier, value){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].sum(undefined)".`);
             else if (isUnefinedOrNull(value)) throw new TypeError(`No value specified "[...].sum(..., undefined)".`);
-            return methods['sum']([identifier, value], name);
+            return methods['sum']([identifier, value], DatabaseName);
         }
 
         /**
@@ -187,14 +187,14 @@ class DatabaseInterface {
          */
         this.toggle = function Toggle(identifier, value = true){
             if (isUnefinedOrNull(identifier)) throw new TypeError(`No identifier specified "[...].toggle(undefined)".`);
-            return methods['toggle']([identifier, value], name);
+            return methods['toggle']([identifier, value], DatabaseName);
         }
 
         /**
          * The all method is used to return all data saved in the database in object.
          * @returns {{}} Returns all data from the database.
          */
-        this.toObject = function ToObject(){ return methods['toObject'](name) }
+        this.toObject = function ToObject(){ return methods['toObject'](DatabaseName) }
     }
 }
 
