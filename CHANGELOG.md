@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/secure-db/secure-db/compare/v1.0.0...v2.0.0) (2022-06-17)
+
+
+### Bug Fixes
+
+* remove warnings for discontinued functions ([89f88fa](https://github.com/secure-db/secure-db/commit/89f88fa73bfae77a2b56c0eec4c8dcd63aea56c5))
+
+
+### BREAKING CHANGES
+
+* All functions related to "Childs" have been migrated to "Database"
+
 # 1.0.0 (2022-06-17)
 
 
