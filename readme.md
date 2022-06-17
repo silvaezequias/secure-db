@@ -17,7 +17,6 @@ SecureDB is a simple and powerful local database that helps [Node.js](https://no
 
 - Fast and high performance
 - Encryption using security key
-- ~~Automatic backup~~^
 - Infinite databases in folders
 
 ## Installation
@@ -39,20 +38,6 @@ $ npm install secure-db
 const { Database } = require('secure-db');
 const db = new Database('my-database');
 ```
-
-# Deprecated Functions !Important
-
-- Child
-- getChilds
-- setBigInt
-
-> The [Child](#deprecated-functions-important) function has been migrated to the [Database](https://github.com/secure-db/secure-db/blob/master/docs/database.md) function.
-
-
-> The [getChilds](#deprecated-functions-important) function has been migrated to the [getDatabases](https://github.com/secure-db/secure-db/blob/master/docs/methods/getDatabases.md) function.
-
-
-> The [setBigInt](#deprecated-functions-important) function has been removed.
 
 ## Example Usage
 
@@ -105,12 +90,14 @@ getDatabases('users', (user_list) => {
 });
 ```
 
+
 ## Links
 
-- [GitHub](https://github.com/secure-db/secure-db#readme)
+- [Changelogs](https://github.com/secure-db/secure-db/blob/master/CHANGELOG.md).
 - [Documentation](https://github.com/secure-db/secure-db/tree/master/docs)
 - [Support Server on Discord](https://discord.gg/gAy6kZzeaR)
 - [More Examples](#example-usage)
+- [GitHub](https://github.com/secure-db/secure-db#readme)
 - [npm](https://www.npmjs.com/package/secure-db)
 
 ## FAQ
