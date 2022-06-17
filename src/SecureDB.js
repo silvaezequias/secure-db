@@ -86,7 +86,6 @@ class DatabaseInterface {
          * @returns {string[]} Returns the name of all databases found within a section.
          */
         this.getDatabases = function GetDatabases(database, callback){
-            callback = callback && callback.constructor === Function ? callback : undefined;
             if (filter(database).length === 0) throw new TypeError(`No name specified "[...].getDatabases(undefined)".`);
             return methods['getDatabases']([filter(database), callback]);
         }
