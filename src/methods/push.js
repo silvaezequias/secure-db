@@ -5,7 +5,7 @@ const handler = {
 }
 
 module.exports = ([identifier, solidData], database) => {
-    const saved_data = handler.read(database.name);
+    const saved_data = handler.read(database);
     var filtered_data = get(saved_data, identifier, []);
 
     switch (identifier.constructor){
@@ -13,6 +13,6 @@ module.exports = ([identifier, solidData], database) => {
             if (filtered_data.constructor === Array) filtered_data.push(solidData); set(saved_data, identifier, filtered_data);
         break;
     }  
-    handler.write(saved_data, database.name);
+    handler.write(saved_data, database);
     return get(saved_data, identifier, solidData);
 }
