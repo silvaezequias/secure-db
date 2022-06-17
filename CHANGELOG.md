@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/secure-db/secure-db/compare/v3.0.0...v3.0.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* delete a useless function check ([d922511](https://github.com/secure-db/secure-db/commit/d922511cba0985ff1e452da26064bcd7781df985))
+
 # [3.0.0](https://github.com/secure-db/secure-db/compare/v2.0.0...v3.0.0) (2022-06-17)
 
 
