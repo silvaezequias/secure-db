@@ -3,12 +3,17 @@
 This method serves to return the name of all [`Databases`](https://github.com/secure-db/secure-db/blob/master/docs/database.md) that exist.
 
 ```javascript
-db.getDatabases('database-name', callback function <optional>);
+/**
+ * @param {string|string[]} DatabaseName - list of database names
+ * @param {function|null} Callback - Call back function to return result
+ * @returns {string[]} Returns an array with the names of existing databases.
+ */
+<db>.getDatabases('database-name', function callback});
 ```
 
 If there is no child database, the returned value will be an empty Array.
-* The parameters can be a `String` or a `Number`.
-* The last parameter must be a `Callback Function`.
+* The first parameter must be a `String` or an `Array` - The array elements must be `String`.
+* The second parameter must be a `Callback Function`.
 
 ### Example
 
@@ -41,10 +46,10 @@ getDatabases('users', user_list => {
   // user_list = [ 'Felipe' ]
 });
 
-var itemList = getDatabases('users', 'Felipe');
+var itemList = getDatabases(['users', 'Felipe']);
 // itemList = [ 'books', 'movies', 'friends' ]
 
-getDatabases('users', 'Felipe', 'books', item_list => {
+getDatabases(['users', 'Felipe', 'books'], item_list => {
   // item_list = []
 });
 ```
