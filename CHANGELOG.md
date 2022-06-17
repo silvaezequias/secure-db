@@ -1,3 +1,16 @@
+# [3.0.0](https://github.com/secure-db/secure-db/compare/v2.0.0...v3.0.0) (2022-06-17)
+
+
+### Bug Fixes
+
+* change the distribution of database names ([b26b1ba](https://github.com/secure-db/secure-db/commit/b26b1ba6d8d89b805096fdaf30ee520641265bea))
+
+
+### BREAKING CHANGES
+
+* The function no longer accepts infinite parameters to define the database name, now
+all names must be passed in an array in the first parameter of the function only.
+
 # [2.0.0](https://github.com/secure-db/secure-db/compare/v1.0.0...v2.0.0) (2022-06-17)
 
 
