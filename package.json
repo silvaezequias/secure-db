@@ -26,5 +26,13 @@
   "dependencies": {
     "fs-extra": "^10.1.0",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
