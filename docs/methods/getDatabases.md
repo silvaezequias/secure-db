@@ -8,11 +8,11 @@ This method serves to return the name of all [`Databases`](https://github.com/se
  * @param {function|null} Callback - Call back function to return result
  * @returns {string[]} Returns an array with the names of existing databases.
  */
-<db>.getDatabases('database-name', function callback});
+db.getDatabases('database-name', function callback(){});
 ```
 
 If there is no child database, the returned value will be an empty Array.
-* The first parameter must be a `String` or an `Array` - The array elements must be `String`.
+* The first parameter must be a `String` or an `Array` - The array elements must be `tring`.
 * The second parameter must be a `Callback Function`.
 
 ### Example
