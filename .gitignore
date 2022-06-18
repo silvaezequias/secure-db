@@ -9,5 +9,5 @@ yarn.lock
 package-lock.json
 .env
 Makefile
-.vscode/settings.json
+.vscode
 .gitignore
