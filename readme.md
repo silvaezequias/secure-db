@@ -93,7 +93,7 @@ getDatabases('users', (user_list) => {
 
 ## Links
 
-- [Changelogs](https://github.com/secure-db/secure-db/blob/master/CHANGELOG.md).
+- [Changelogs](https://github.com/secure-db/secure-db/blob/master/CHANGELOG.md)
 - [Documentation](https://github.com/secure-db/secure-db/tree/master/docs)
 - [Support Server on Discord](https://discord.gg/gAy6kZzeaR)
 - [More Examples](#example-usage)
