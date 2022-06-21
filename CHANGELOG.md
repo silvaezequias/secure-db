@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/secure-db/secure-db/compare/v3.0.1...v3.0.2) (2022-06-21)
+
+
+### Bug Fixes
+
+* **splice:** add a deep object filter in the splice method ([dfe4531](https://github.com/secure-db/secure-db/commit/dfe4531e30eba39e788fbe25d3c88c22fd53669c))
+
 ## [3.0.1](https://github.com/secure-db/secure-db/compare/v3.0.0...v3.0.1) (2022-06-17)
 
 
