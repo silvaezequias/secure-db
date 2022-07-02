@@ -11,3 +11,4 @@ package-lock.json
 Makefile
 .vscode
 .gitignore
+.github

@@ -117,7 +117,7 @@ class DatabaseInterface {
         * @param {string|number|string[]} database - Name(s) of the database(s).
          */
         this.remove = function Remove(database){
-            database = database && database.constructor === Array ? database : arguments;
+            database = database ? database.constructor === Array ? database : arguments : DatabaseName;
             return methods['remove'](filter(database))
         };
 
