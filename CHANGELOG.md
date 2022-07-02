@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/secure-db/secure-db/compare/v3.0.2...v3.0.3) (2022-07-02)
+
+
+### Bug Fixes
+
+* **remove:** fix the remove method to remove itself ([f333ef9](https://github.com/secure-db/secure-db/commit/f333ef9c765b86b5aab020846fa14c89f85c95c7))
+
 ## [3.0.2](https://github.com/secure-db/secure-db/compare/v3.0.1...v3.0.2) (2022-06-21)
 
 
