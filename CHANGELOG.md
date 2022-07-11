@@ -1,3 +1,17 @@
+# [3.1.0](https://github.com/secure-db/secure-db/compare/v3.0.3...v3.1.0) (2022-07-11)
+
+
+### Bug Fixes
+
+* **cypt:** adjust support for encrypted data ([769db3b](https://github.com/secure-db/secure-db/commit/769db3bd098286e50a786ea9d3e26f8adfadb3c0))
+
+
+### Features
+
+* add encrypted data support ([e1d8ca6](https://github.com/secure-db/secure-db/commit/e1d8ca6a204fef57dfef72fd44c7d0a9add799a1))
+* **cypt:** add general encryption manager ([2a54cbf](https://github.com/secure-db/secure-db/commit/2a54cbfedfe5b04f00617685a97956bb4be52340))
+* **cypt:** add new encryption feature ([61e7986](https://github.com/secure-db/secure-db/commit/61e79861ce5034f0eb3ed0aad4f32e2132fe2aaf))
+
 ## [3.0.3](https://github.com/secure-db/secure-db/compare/v3.0.2...v3.0.3) (2022-07-02)
 
 
