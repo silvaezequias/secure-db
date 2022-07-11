@@ -1,6 +1,6 @@
 const handler = {read: require('../handler/read')}
 
-module.exports = (database) => {
-    var saved_data = handler.read(database);
+module.exports = (DatabaseSettings) => {
+    var saved_data = handler.read(DatabaseSettings);
     return Object.entries(saved_data)
 }

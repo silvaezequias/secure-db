@@ -3,8 +3,8 @@ const handler = {
     read: require('../handler/read'),
     write: require('../handler/write')
 }
-module.exports = ([identifier], database) => {
-    var saved_data = handler.read(database)
+module.exports = ([identifier], DatabaseSettings) => {
+    var saved_data = handler.read(DatabaseSettings)
     var new_data = {};
     switch (identifier.constructor){
         case String: case Number: case Boolean:
@@ -16,6 +16,6 @@ module.exports = ([identifier], database) => {
             })
         break;
     }
-    handler.write(new_data, database);
+    handler.write(new_data, DatabaseSettings);
     return new_data;
 }

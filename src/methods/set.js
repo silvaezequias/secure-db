@@ -4,8 +4,8 @@ const handler = {
     write: require('../handler/write')
 }
 
-module.exports = ([ identifier, solidData ], database) => {
-    var saved_data = handler.read(database);
+module.exports = ([ identifier, solidData ], DatabaseSettings) => {
+    var saved_data = handler.read(DatabaseSettings);
 
     switch (identifier.constructor){
         case Number: case String: case Boolean: set(saved_data, identifier, solidData);  break;
@@ -13,6 +13,6 @@ module.exports = ([ identifier, solidData ], database) => {
         case Object: saved_data = identifier; break;
     }
 
-    handler.write(saved_data, database);
+    handler.write(saved_data, DatabaseSettings);
     return solidData ? solidData : identifier;
 }
