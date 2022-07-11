@@ -1,7 +1,7 @@
-const  { infinityChar } = require('../../config');
+const  { infinity_char } = require('../../settings');
 
 function CharToInfinity(data){
-    if (data === infinityChar) data = Infinity;
+    if (data === infinity_char) data = Infinity;
     
     switch(data.constructor){
         case Array: data = ParseDeepArray(data); break;
@@ -12,11 +12,11 @@ function CharToInfinity(data){
         target.forEach((item, index) => {
             if (!item) return item;
 
-            item = item === infinityChar ? Infinity : item;
+            item = item === infinity_char ? Infinity : item;
             switch(item.constructor){
                 case Array: item = ParseDeepArray(item); break;
                 case Object: item = ParseDeepObject(item); break;
-                case Number: item = item === infinityChar ? Infinity : item;
+                case Number: item = item === infinity_char ? Infinity : item;
             }
             target[index] = item;
         });
@@ -27,11 +27,11 @@ function CharToInfinity(data){
         entries.forEach(([key, item]) => {
             if (!item) return {[key]: item}; 
 
-            item = item === infinityChar ? Infinity : item;
+            item = item === infinity_char ? Infinity : item;
             switch(item.constructor){
                 case Array: item = ParseDeepArray(item); break;
                 case Object: item = ParseDeepObject(item); break;
-                case Number: item = item === infinityChar ? Infinity : item;
+                case Number: item = item === infinity_char ? Infinity : item;
             }
             target[key] = item;
         })
