@@ -18,7 +18,7 @@
     "db",
     "no-sql"
   ],
-  "author": "DablioZe'",
+  "author": "Ezequias Lopes <ezequiaslopesdev@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/secure-db/secure-db/issues"
@@ -31,7 +31,8 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "cz-conventional-changelog": "3.3.0"
+    "cz-conventional-changelog": "3.3.0",
+    "dotenv": "^16.0.1"
   },
   "config": {
     "commitizen": {

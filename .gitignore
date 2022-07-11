@@ -6,7 +6,6 @@ test
 *.db
 .releaserc.json
 yarn.lock
-package-lock.json
 .env
 Makefile
 .vscode
