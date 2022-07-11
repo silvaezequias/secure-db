@@ -1,0 +1,11 @@
+{
+    "file_extension": "db",
+    "default_name": "main",
+    "infinity_char": "∞",
+    "max_limit": 1e+20,
+    "cryptography": {
+        "key": false,
+        "mode": ["deep", "soft"],
+        "output": ["base64", "hex"]
+    }
+}

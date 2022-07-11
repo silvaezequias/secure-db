@@ -1,5 +1,5 @@
 'use strict';
-module.exports = require('./src/SecureDB');
+module.exports = require('./lib/securedb');
 
 /**
  * The currently installed version of this package.
