@@ -1,3 +1,12 @@
+## [3.1.1](https://github.com/secure-db/secure-db/compare/v3.1.0...v3.1.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* fix the encryption security key typing checks ([bbb809f](https://github.com/secure-db/secure-db/commit/bbb809f7229a1e09c0877dba23420b93f8393c4f))
+* fix the encryption security key typing checks ([9f21878](https://github.com/secure-db/secure-db/commit/9f21878a4f73c6780a3b8b99b398b41e4787dc2b))
+* **lib/src:** fix the main root of commands ([1793b1b](https://github.com/secure-db/secure-db/commit/1793b1b2d3210623a6fefb2fb075b6b3d18f197c))
+
 # [3.1.0](https://github.com/secure-db/secure-db/compare/v3.0.3...v3.1.0) (2022-07-11)
 
 
