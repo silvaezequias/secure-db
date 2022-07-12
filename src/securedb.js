@@ -135,8 +135,8 @@ class DatabaseInterface {
         this.security = function Security(settings){
             if (isUnefinedOrNull(settings)) throw new TypeError(`No settings specified "[...].security(undefined)".`);
             switch(settings.constructor){
-                case String: DatabaseSettings['cryptography'] = { key: settings };
-                case Boolean: case Object: DatabaseInterface['cryptography'] = settings;
+                case String: DatabaseSettings['cryptography'] = { key: settings }; break;
+                case Boolean: case Object: DatabaseSettings['cryptography'] = settings; break;
             }
         }
 

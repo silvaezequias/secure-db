@@ -6,7 +6,7 @@ module.exports = function Encode(data, { cryptography }){ var result = '';
     } = cryptography;
 
     switch (key.constructor){
-        case String: let _PROTO_ = 0000; _PROTO_ *= (Math.PI * 2 + key.length); break;
+        case String: if (key.trim().length === 0) throw new Error('Key of type string is required.'); break;
         default: throw new Error('Key of type string is required.'); break;
     }
 
