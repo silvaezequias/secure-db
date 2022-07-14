@@ -46,7 +46,7 @@ const User2 = new Database('users', 'user-2');
 const User3 = new Database('users', 'user-3');
 
 getDatabases('users'); // [ 'user-1', 'user-2', 'user-3' ];
-getDatabases('section_nonexistent'); // [] 
+getDatabases('another_section'); // [] 
 ```
 
 ## Remove Database
