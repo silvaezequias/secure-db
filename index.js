@@ -206,7 +206,7 @@ class Database {
     this.toObject = function ToObject(){
        return methods['toObject'](settings, cryptography);
     };
-    this.version = require('../package.json')?.version
+    this.version = require('./package.json')?.version
   };
 };
 
