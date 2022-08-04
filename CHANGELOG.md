@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/secure-db/secure-db/compare/v3.2.0...v3.2.1) (2022-08-04)
+
+
+### Bug Fixes
+
+* fix package.json path in start file ([a2d2615](https://github.com/secure-db/secure-db/commit/a2d26159f9eef19cad0536d07a1377e63113f5b0))
+
 # [3.2.0](https://github.com/secure-db/secure-db/compare/v3.1.1...v3.2.0) (2022-08-04)
 
 
