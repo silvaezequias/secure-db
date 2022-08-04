@@ -1,3 +1,36 @@
+# [3.2.0](https://github.com/secure-db/secure-db/compare/v3.1.1...v3.2.0) (2022-08-04)
+
+
+### Bug Fixes
+
+* add encryption support ([69758f8](https://github.com/secure-db/secure-db/commit/69758f8d3c75db4faa536b9b0d0363ea974455d5))
+* add encryption support ([5f40d58](https://github.com/secure-db/secure-db/commit/5f40d587df3bffc5a820d7911e5147d3542cc717))
+* add encryption support ([0d5b715](https://github.com/secure-db/secure-db/commit/0d5b7158d0cd1e123fbfce8b0583be0fad651157))
+* add support for all variable types ([9bd07ca](https://github.com/secure-db/secure-db/commit/9bd07ca1845061dd9240b4706572a343947d0a7c))
+* callback type check ([4aa1d65](https://github.com/secure-db/secure-db/commit/4aa1d65454a8fa07af13390c638b103455973ec6))
+* change database management settings ([9ff70cf](https://github.com/secure-db/secure-db/commit/9ff70cf0935bb8f43f9e69da062915d6de84a27c))
+* change existing folder path management ([3feeb32](https://github.com/secure-db/secure-db/commit/3feeb32bb469dabfc1cfcdb960addf2195844070))
+* change name formatting ([72ad581](https://github.com/secure-db/secure-db/commit/72ad58114bd9bfa944bd21f32921e36b4ea10467))
+* change path management ([6b35f90](https://github.com/secure-db/secure-db/commit/6b35f90a62a1db3b6c7fda7ad944e60654dd06c5))
+* change project root ([06f15a1](https://github.com/secure-db/secure-db/commit/06f15a116b9d9271c663e8ab9f0fa839baab9225))
+* change project root directory ([0eb37ec](https://github.com/secure-db/secure-db/commit/0eb37ec8fe037df004bbe8051919e5869b6f8ea6))
+* change result variable ([ce3921b](https://github.com/secure-db/secure-db/commit/ce3921b32d5a8e6a600cd580797b49e0b0ce75d6))
+* change return mode of variables ([378f3e1](https://github.com/secure-db/secure-db/commit/378f3e1239e240bd931c79dd16e78144f08d7ea1))
+* change the way to delete files and directories ([a4d4bcc](https://github.com/secure-db/secure-db/commit/a4d4bccf535f8eb57172997759e5d51605ba5485))
+* fix addition modes and adapt for encoding ([740adac](https://github.com/secure-db/secure-db/commit/740adacb7a682f3fc51c0943934adaa7794ad248))
+* fix save method added encryption support ([df78803](https://github.com/secure-db/secure-db/commit/df78803833c43b0fb0925dda84094fa7fa9e61d0))
+* fix the way to delete the data ([e3b15c2](https://github.com/secure-db/secure-db/commit/e3b15c2f7b12a5ca5719aa5617200d1abeb06020))
+* hide security files ([f5b488d](https://github.com/secure-db/secure-db/commit/f5b488d6da80999e74ba95ecc935a2f56c58c51f))
+* toggle management between Booleans ([5e72629](https://github.com/secure-db/secure-db/commit/5e7262938b5df648804b938a43e87b4eeae64d7d))
+
+
+### Features
+
+* add a directory manager ([5b2c616](https://github.com/secure-db/secure-db/commit/5b2c61680b30a7ead15723a584dcb3d25db63ec9))
+* add database reader with encryption support ([a1f24b4](https://github.com/secure-db/secure-db/commit/a1f24b4e04951543912db4eb1d891048c1318509))
+* add new database creation method ([4ba719f](https://github.com/secure-db/secure-db/commit/4ba719f992ffdd90836cafe62e910204b6cf9037))
+* general encryption managers ([4dcc6cb](https://github.com/secure-db/secure-db/commit/4dcc6cb3d9652331e04c5ca5c3fb7aa502597b14))
+
 ## [3.1.1](https://github.com/secure-db/secure-db/compare/v3.1.0...v3.1.1) (2022-07-12)
 
 
