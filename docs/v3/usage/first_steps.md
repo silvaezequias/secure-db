@@ -8,7 +8,7 @@ $ npm install secure-db
 ```
 
 ## Create the code 
-You can check all the contents at https://github.com/secure-db/secure-db/tree/master/docs/v3.
+You can check all the contents at https://github.com/gatodeoculos/secure-db/tree/master/docs/v3.
 
 Create a file for you to work better with the package
 ```js

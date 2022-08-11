@@ -1,6 +1,6 @@
 ## GetDatabases Method
 
-This method serves to return the name of all [`Databases`](https://github.com/secure-db/secure-db/blob/master/docs/database.md) that exist.
+This method serves to return the name of all [`Databases`](https://github.com/gatodeoculos/secure-db/blob/master/docs/database.md) that exist.
 
 ```javascript
 /**
