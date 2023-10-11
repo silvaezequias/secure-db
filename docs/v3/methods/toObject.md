@@ -17,7 +17,7 @@ db.set('my_money', 800);
 db.set('user', 'David');
 db.set('afk-mode', false);
 
-db.toOjbect();
+db.toObject();
 /*
 {
     my_money: 800,
